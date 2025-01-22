@@ -773,6 +773,36 @@ Advanced Git workflows often call for data integrity and authenticity, especiall
 
 #### Explore all 100 answers here 👉 [Devinterview.io - Git](https://devinterview.io/questions/web-and-mobile-development/git-interview-questions)
 
+Negative Cases
+
+## If we made any change by mistake and save it
+
+## Case1: To undo changes, get the last successful change
+
+git restore . or filename (. mean all files)
+
+## Case2: If we added the changes using git add then..
+
+git restore --staged <file_path> # To unstage
+
+git restore <file_path> # To discard changes in the working directory
+
+## Negative Cases
+
+## Case3: Added changes to staging area (didn't commit) after this added more changes to file
+
+//To get the staged changes
+
+git restore --worktree index.html
+
+
+## Case4: How about if we did commit also wrong files
+
+git reset --soft HEAD^ (uncommit and keep the changes)
+
+git reset --hard HEAD^ (uncommit and discard the changes)
+
+
 <br>
 
 <a href="https://devinterview.io/questions/web-and-mobile-development/">
